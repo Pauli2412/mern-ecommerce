@@ -81,11 +81,10 @@ class Navigation extends React.PureComponent {
         <div className='d-flex'>
           <img
             className='item-image'
-            src={`${
-              suggestion.imageUrl
-                ? suggestion.imageUrl
-                : '/images/placeholder-image.png'
-            }`}
+            src={`${suggestion.imageUrl
+              ? suggestion.imageUrl
+              : '/images/placeholder-image.png'
+              }`}
           />
           <div>
             <Container>
@@ -142,19 +141,19 @@ class Navigation extends React.PureComponent {
             <Row>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-truck' />
-                <span>Free Shipping</span>
+                <span>Envío gratis</span>
               </Col>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-credit-card' />
-                <span>Payment Methods</span>
+                <span>Métodos de pago</span>
               </Col>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-phone' />
-                <span>Call us 951-999-9999</span>
+                <span>Llámanos 951-999-9999</span>
               </Col>
               <Col xs='12' className='text-center d-block d-md-none'>
                 <i className='fa fa-phone' />
-                <span> Need advice? Call us 951-999-9999</span>
+                <span> ¿Necesitas consejo? Llámanos +593 98 807 2618</span>
               </Col>
             </Row>
           </Container>
@@ -174,13 +173,13 @@ class Navigation extends React.PureComponent {
                     borderless
                     variant='empty'
                     className='d-none d-md-block'
-                    ariaLabel='open the menu'
+                    ariaLabel='Abrir Menú'
                     icon={<BarsIcon />}
                     onClick={() => this.toggleMenu()}
                   />
                 )}
                 <Link to='/'>
-                  <h1 className='logo'>MERN Store</h1>
+                  <h1 className='logo'>LEBASSI</h1>
                 </Link>
               </div>
             </Col>
@@ -226,7 +225,7 @@ class Navigation extends React.PureComponent {
               sm={{ size: 12, order: 2 }}
               md={{ size: 9, order: 1 }}
               lg={{ size: 4, order: 3 }}
-              // className='px-0'
+            // className='px-0'
             >
               <Navbar color='light' light expand='md' className='mt-1 mt-md-0'>
                 <CartIcon
@@ -243,7 +242,7 @@ class Navigation extends React.PureComponent {
                       isOpen={isBrandOpen}
                     >
                       <DropdownToggle nav>
-                        Brands
+                        Marcas
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
                       <DropdownMenu right className='nav-brand-dropdown'>
@@ -262,36 +261,36 @@ class Navigation extends React.PureComponent {
                       to='/shop'
                       activeClassName='active'
                     >
-                      Shop
+                      Tienda
                     </NavLink>
                   </NavItem>
                   {authenticated ? (
                     <UncontrolledDropdown nav inNavbar>
                       <DropdownToggle nav>
-                        {user.firstName ? user.firstName : 'Welcome'}
+                        {user.firstName ? user.firstName : 'Bienvenido'}
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
                       <DropdownMenu right>
                         <DropdownItem
                           onClick={() => history.push('/dashboard')}
                         >
-                          Dashboard
+                          Tablero
                         </DropdownItem>
-                        <DropdownItem onClick={signOut}>Sign Out</DropdownItem>
+                        <DropdownItem onClick={signOut}>Cerrar sesión</DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>
                   ) : (
                     <UncontrolledDropdown nav inNavbar>
                       <DropdownToggle nav>
-                        Welcome!
+                        ¡Bienvenido!
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
                       <DropdownMenu right>
                         <DropdownItem onClick={() => history.push('/login')}>
-                          Login
+                          Iniciar sesión
                         </DropdownItem>
                         <DropdownItem onClick={() => history.push('/register')}>
-                          Sign Up
+                          Registrarse
                         </DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>

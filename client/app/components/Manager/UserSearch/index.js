@@ -13,8 +13,8 @@ const UserSearch = props => {
     <div className='mb-3'>
       <SearchBar
         name='user'
-        placeholder='Type user name or email'
-        btnText='Search'
+        placeholder='Escriba el nombre de usuario o el correo electrónico'
+        btnText='Buscar'
         onSearch={props.onSearch}
         onBlur={props.onBlur}
         onSearchSubmit={props.onSearchSubmit}

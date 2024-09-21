@@ -36,7 +36,7 @@ const AddMerchant = props => {
               error={formErrors['name']}
               label={'Name'}
               name={'name'}
-              placeholder={'Your Full Name'}
+              placeholder={'Ingresa el nombre'}
               value={merchantFormData.name}
               onInputChange={(name, value) => {
                 merchantChange(name, value);
@@ -49,7 +49,7 @@ const AddMerchant = props => {
               error={formErrors['email']}
               label={'Email Address'}
               name={'email'}
-              placeholder={'Your Email Address'}
+              placeholder={'Ingresa en Correo'}
               value={merchantFormData.email}
               onInputChange={(name, value) => {
                 merchantChange(name, value);
@@ -62,7 +62,7 @@ const AddMerchant = props => {
               error={formErrors['phoneNumber']}
               label={'Phone Number'}
               name={'phoneNumber'}
-              placeholder={'Your Phone Number'}
+              placeholder={'INgresa un numero telefonico'}
               value={merchantFormData.phoneNumber}
               onInputChange={(name, value) => {
                 merchantChange(name, value);
@@ -75,7 +75,7 @@ const AddMerchant = props => {
               error={formErrors['brandName']}
               label={'Brand'}
               name={'brandName'}
-              placeholder={'Your Business Brand'}
+              placeholder={'Marca'}
               value={merchantFormData.brand}
               onInputChange={(name, value) => {
                 merchantChange(name, value);
@@ -88,7 +88,7 @@ const AddMerchant = props => {
               error={formErrors['business']}
               label={'Business'}
               name={'business'}
-              placeholder={'Please Describe Your Business'}
+              placeholder={'Ingresa una Descripcion'}
               value={merchantFormData.business}
               onInputChange={(name, value) => {
                 merchantChange(name, value);

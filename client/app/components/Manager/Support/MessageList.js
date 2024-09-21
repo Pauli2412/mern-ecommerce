@@ -39,7 +39,7 @@ const MessagesList = props => {
         </div>
       ) : (
         <div className='my-4'>
-          <NotFound message='No messages found.' />
+          <NotFound message='No se encontraron mensajes.' />
         </div>
       )}
     </>
@@ -67,9 +67,8 @@ const Message = memo(props => {
   return (
     <div className='m-container'>
       <div
-        className={`d-flex ${
-          isMe ? 'justify-content-end' : 'justify-content-start'
-        }`}
+        className={`d-flex ${isMe ? 'justify-content-end' : 'justify-content-start'
+          }`}
       >
         {!isMe && (
           <div className='mr-2 avatar-box'>

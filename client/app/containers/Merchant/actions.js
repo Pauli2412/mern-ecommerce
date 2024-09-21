@@ -79,14 +79,15 @@ export const addMerchant = (isBack = false) => {
       const merchant = getState().merchant.merchantFormData;
 
       const { isValid, errors } = allFieldsValidation(merchant, rules, {
-        'required.name': 'Name is required.',
-        'required.email': 'Email is required.',
-        'email.email': 'Email format is invalid.',
-        'required.phoneNumber': 'Phone number is required.',
-        'regex.phoneNumber': 'Phone number format is invalid.',
-        'required.brandName': 'Brand is required.',
-        'required.business': 'Business is required.',
-        'min.business': 'Business must be at least 10 characters.'
+        'required.name': 'El nombre es obligatorio.',
+        'required.email': 'El correo electrónico es obligatorio.',
+        'email.email': 'El formato del correo electrónico es inválido.',
+        'required.phoneNumber': 'El número de teléfono es obligatorio.',
+        'regex.phoneNumber': 'El formato del número de teléfono es inválido.',
+        'required.brandName': 'La marca es obligatoria.',
+        'required.business': 'El negocio es obligatorio.',
+        'min.business': 'El negocio debe tener al menos 10 caracteres.'
+
       });
 
       if (!isValid) {
@@ -231,10 +232,11 @@ export const merchantSignUp = token => {
       const merchant = getState().merchant.signupFormData;
 
       const { isValid, errors } = allFieldsValidation(merchant, rules, {
-        'required.email': 'Email is required.',
-        'required.password': 'Password is required.',
-        'required.firstName': 'First Name is required.',
-        'required.lastName': 'Last Name is required.'
+        'required.email': 'El correo electrónico es obligatorio.',
+        'required.password': 'La contraseña es obligatoria.',
+        'required.firstName': 'El nombre es obligatorio.',
+        'required.lastName': 'El apellido es obligatorio.'
+
       });
 
       if (!isValid) {
@@ -244,7 +246,7 @@ export const merchantSignUp = token => {
       await axios.post(`${API_URL}/merchant/signup/${token}`, merchant);
 
       const successfulOptions = {
-        title: `You have signed up successfully! Please sign in with the email and password. Thank you!`,
+        title: `Se ha registrado correctamente. Por favor, inicie sesión con el correo electrónico y la contraseña. Gracias.`,
         position: 'tr',
         autoDismiss: 1
       };
@@ -254,7 +256,7 @@ export const merchantSignUp = token => {
       dispatch(push('/login'));
       dispatch({ type: SIGNUP_RESET });
     } catch (error) {
-      const title = `Please try to signup again!`;
+      const title = `Por favor, intente registrarse de nuevo!`;
       handleError(error, dispatch, title);
     }
   };

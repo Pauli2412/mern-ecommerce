@@ -16,14 +16,14 @@ const UserRole = props => {
     <>
       {user.role === ROLES.Admin ? (
         <Badge variant='primary' className={className}>
-          Admin
+          Administrador
         </Badge>
       ) : user.role === ROLES.Merchant ? (
         <Badge variant='dark' className={className}>
-          Merchant
+          Comerciante
         </Badge>
       ) : (
-        <Badge className={className}>Member</Badge>
+        <Badge className={className}>Miembro</Badge>
       )}
     </>
   );

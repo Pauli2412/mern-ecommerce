@@ -104,11 +104,11 @@ export const addAddress = () => {
       const isDefault = getState().address.isDefault;
 
       const { isValid, errors } = allFieldsValidation(newAddress, rules, {
-        'required.address': 'Address is required.',
-        'required.city': 'City is required.',
-        'required.state': 'State is required.',
-        'required.country': 'Country is required.',
-        'required.zipCode': 'Zipcode is required.'
+        'required.address': 'La dirección es obligatoria.',
+        'required.city': 'La Ciudad es obligatoria..',
+        'required.state': 'El Estado/Capital es obligatoria.',
+        'required.country': 'Pais Obligatorio.',
+        'required.zipCode': 'Codigo Postal Obligatorio.'
       });
 
       if (!isValid) {
@@ -158,11 +158,11 @@ export const updateAddress = () => {
       const newAddress = getState().address.address;
 
       const { isValid, errors } = allFieldsValidation(newAddress, rules, {
-        'required.address': 'Address is required.',
-        'required.city': 'City is required.',
-        'required.state': 'State is required.',
-        'required.country': 'Country is required.',
-        'required.zipCode': 'Zipcode is required.'
+        'required.address': 'La dirección es obligatoria.',
+        'required.city': 'La Ciudad es obligatoria..',
+        'required.state': 'El Estado/Capital es obligatoria.',
+        'required.country': 'Pais Obligatorio.',
+        'required.zipCode': 'Codigo Postal Obligatorio.'
       });
 
       if (!isValid) {

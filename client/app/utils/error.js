@@ -18,7 +18,7 @@ const handleError = (err, dispatch, title = '') => {
 
   if (err.response) {
     if (err.response.status === 400) {
-      unsuccessfulOptions.title = title ? title : 'Please Try Again!';
+      unsuccessfulOptions.title = title ? title : 'Por favor intenta de nuevo!';
       unsuccessfulOptions.message = err.response.data.error;
       dispatch(error(unsuccessfulOptions));
     } else if (err.response.status === 404) {
@@ -27,12 +27,12 @@ const handleError = (err, dispatch, title = '') => {
       //   'Your request could not be processed. Please try again.';
       // dispatch(error(unsuccessfulOptions));
     } else if (err.response.status === 401) {
-      unsuccessfulOptions.message = 'Unauthorized Access! Please login again';
+      unsuccessfulOptions.message = 'Acceso no autorizado Por favor, inicie sesión de nuevo';
       dispatch(signOut());
       dispatch(error(unsuccessfulOptions));
     } else if (err.response.status === 403) {
       unsuccessfulOptions.message =
-        'Forbidden! You are not allowed to access this resource.';
+        'Prohibido No tiene permiso para acceder a este recurso.';
       dispatch(error(unsuccessfulOptions));
     }
   } else if (err.message) {
@@ -41,7 +41,7 @@ const handleError = (err, dispatch, title = '') => {
   } else {
     // fallback
     unsuccessfulOptions.message =
-      'Your request could not be processed. Please try again.';
+      'Su solicitud no ha podido ser procesada. Por favor, inténtelo de nuevo.';
   }
 };
 

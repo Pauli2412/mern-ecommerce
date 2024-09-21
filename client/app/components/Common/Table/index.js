@@ -13,7 +13,7 @@ import ToolkitProvider, {
 } from 'react-bootstrap-table2-toolkit';
 
 const indication = () => {
-  return 'Oops! No data now! Please try again!';
+  return '¡Ups! ¡No hay datos ahora! ¡Por favor, inténtalo de nuevo!';
 };
 
 const { ExportCSVButton } = CSVExport;
@@ -72,7 +72,7 @@ const Table = props => {
             hover={hover}
             condensed={condensed}
             noDataIndication={indication}
-            // rowEvents={isRowEvents ? rowEvents : null}
+          // rowEvents={isRowEvents ? rowEvents : null}
           />
         </div>
       )}

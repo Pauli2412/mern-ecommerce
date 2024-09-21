@@ -25,7 +25,7 @@ const BrandList = props => {
           <p className='brand-desc mb-2'>{brand.description}</p>
           {brand?.merchant && brand?.merchant?._id !== user?.merchant && (
             <div className='d-flex'>
-              <label>By</label>
+              <label>Por</label>
               <p className='brand-merchant mb-0 ml-2 text-primary'>
                 {brand.merchant.name}
               </p>

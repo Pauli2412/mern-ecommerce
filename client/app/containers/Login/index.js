@@ -58,7 +58,7 @@ class Login extends React.PureComponent {
                   error={formErrors['email']}
                   label={'Email Address'}
                   name={'email'}
-                  placeholder={'Please Enter Your Email'}
+                  placeholder={'Por favor ingresa tu correo'}
                   value={loginFormData.email}
                   onInputChange={(name, value) => {
                     loginChange(name, value);
@@ -71,7 +71,7 @@ class Login extends React.PureComponent {
                   error={formErrors['password']}
                   label={'Password'}
                   name={'password'}
-                  placeholder={'Please Enter Your Password'}
+                  placeholder={'Por favor ingresa tu contraseña'}
                   value={loginFormData.password}
                   onInputChange={(name, value) => {
                     loginChange(name, value);
@@ -93,12 +93,12 @@ class Login extends React.PureComponent {
               <Button
                 type='submit'
                 variant='primary'
-                text='Login'
+                text='Ingresar'
                 disabled={isSubmitting}
               />
               <Button
                 text='Create an account'
-                variant='link'
+                variant='Crear'
                 className='ml-md-3'
                 onClick={registerLink}
               />
@@ -107,7 +107,7 @@ class Login extends React.PureComponent {
               className='redirect-link forgot-password-link'
               to={'/forgot-password'}
             >
-              Forgot Password?
+              ¿Ha olvidado su contraseña?
             </Link>
           </div>
         </form>

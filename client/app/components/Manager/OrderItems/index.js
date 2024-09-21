@@ -44,7 +44,7 @@ const OrderItems = props => {
           className='btn-link text-center py-2 fs-12'
           style={{ minWidth: 120 }}
         >
-          Reivew Product
+          Revisar Producto
         </Link>
       );
     } else if (item.status !== 'Cancelled') {
@@ -57,7 +57,7 @@ const OrderItems = props => {
                 variant='danger'
                 id='CancelOrderItemPopover'
                 size='sm'
-                text='Confirm Cancel'
+                text='Confirmar - Cancelar'
                 role='menuitem'
                 className='cancel-order-btn'
                 onClick={() => updateOrderItemStatus(item._id, 'Cancelled')}
@@ -89,11 +89,10 @@ const OrderItems = props => {
                 <div className='d-flex align-items-center box'>
                   <img
                     className='item-image'
-                    src={`${
-                      item.product && item.product.imageUrl
-                        ? item.product.imageUrl
-                        : '/images/placeholder-image.png'
-                    }`}
+                    src={`${item.product && item.product.imageUrl
+                      ? item.product.imageUrl
+                      : '/images/placeholder-image.png'
+                      }`}
                   />
                   <div className='d-md-flex flex-1 align-items-start ml-4 item-box'>
                     <div className='item-details'>
@@ -114,20 +113,20 @@ const OrderItems = props => {
                           </div>
                         </>
                       ) : (
-                        <h4>Not Available</h4>
+                        <h4>No Disponible</h4>
                       )}
                     </div>
                     <div className='d-flex justify-content-between flex-wrap d-md-none mt-1'>
                       <p className='mb-1 mr-4'>
-                        Status
+                        Estado
                         <span className='order-label order-status'>{` ${item.status}`}</span>
                       </p>
                       <p className='mb-1 mr-4'>
-                        Quantity
+                        Cantidad
                         <span className='order-label'>{` ${item.quantity}`}</span>
                       </p>
                       <p>
-                        Total Price
+                        Total
                         <span className='order-label'>{` $${item.totalPrice}`}</span>
                       </p>
                     </div>
@@ -137,18 +136,18 @@ const OrderItems = props => {
                 <div className='d-none d-md-flex justify-content-between align-items-center box'>
                   <div className='text-center'>
                     <p className='order-label order-status'>{`${item.status}`}</p>
-                    <p>Status</p>
+                    <p>Estado</p>
                   </div>
 
                   <div className='text-center'>
                     <p className='order-label'>{` ${item.quantity}`}</p>
-                    <p>Quantity</p>
+                    <p>Cantidad</p>
                   </div>
 
                   <div className='text-center'>
                     <p className='order-label'>{` $${item.totalPrice}`}</p>
 
-                    <p>Total Price</p>
+                    <p>Total</p>
                   </div>
                 </div>
               </div>

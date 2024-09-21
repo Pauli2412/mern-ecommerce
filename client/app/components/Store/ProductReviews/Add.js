@@ -28,7 +28,7 @@ const Add = props => {
   return (
     <div className='bg-white p-4 box-shadow-primary add-review'>
       <form onSubmit={handleSubmit} noValidate>
-        <h3 className='mb-3'>Add Review</h3>
+        <h3 className='mb-3'>Añadir reseña</h3>
         <Row>
           <Col xs='12' md='12'>
             <Input
@@ -36,7 +36,7 @@ const Add = props => {
               error={reviewFormErrors['title']}
               label={'Title'}
               name={'title'}
-              placeholder={'Enter Review title'}
+              placeholder={'Introducir el título de la reseña'}
               value={reviewFormData.title}
               onInputChange={(name, value) => {
                 reviewChange(name, value);
@@ -49,7 +49,7 @@ const Add = props => {
               error={reviewFormErrors['review']}
               label={'Comment'}
               name={'review'}
-              placeholder={'Write Review'}
+              placeholder={'Escribir Reseña'}
               value={reviewFormData.review}
               onInputChange={(name, value) => {
                 reviewChange(name, value);
@@ -60,7 +60,7 @@ const Add = props => {
             <Input
               type={'stars'}
               error={reviewFormErrors['rating']}
-              label={'Rating'}
+              label={'Clasificacion'}
               name={'rating'}
               value={reviewFormData.rating}
               onInputChange={(name, value) => {
@@ -71,7 +71,7 @@ const Add = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={reviewFormErrors['isRecommended']}
-              label={'Will you recommend this product?'}
+              label={'¿Recomendarías este producto?'}
               name={'isRecommended'}
               value={reviewFormData.isRecommended}
               options={recommedableSelect}

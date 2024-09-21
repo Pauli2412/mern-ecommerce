@@ -59,7 +59,7 @@ const rateMarks = {
       </span>
     )
   },
-  100: { label: <span>Any</span> }
+  100: { label: <span>Cualquiera</span> }
 };
 
 const rating = v => {
@@ -86,7 +86,7 @@ const ProductFilter = props => {
   return (
     <div className='product-filter'>
       <Card className='mb-4'>
-        <CardHeader tag='h3'>Price</CardHeader>
+        <CardHeader tag='h3'>Precio</CardHeader>
         <CardBody>
           <div className='mx-2 mb-3'>
             <RangeSlider
@@ -101,7 +101,7 @@ const ProductFilter = props => {
         </CardBody>
       </Card>
       <Card>
-        <CardHeader tag='h3'>Rating</CardHeader>
+        <CardHeader tag='h3'>Clasificacion</CardHeader>
         <CardBody>
           <div className='mx-2 mb-4'>
             <RangeSlider

@@ -16,10 +16,10 @@ const CartSummary = props => {
       <Container>
         <Row className='mb-2 summary-item'>
           <Col xs='9'>
-            <p className='summary-label'>Shippling</p>
+            <p className='summary-label'>Envio</p>
           </Col>
           <Col xs='3' className='text-right'>
-            <p className='summary-value'>Free</p>
+            <p className='summary-value'>Descuento</p>
           </Col>
         </Row>
         <Row className='mb-2 summary-item'>

@@ -40,7 +40,7 @@ const EditProduct = props => {
   return (
     <div className='edit-product'>
       <div className='d-flex flex-row mx-0 mb-3'>
-        <label className='mr-1'>Product link </label>
+        <label className='mr-1'>Productos </label>
         <Link to={`/product/${product.slug}`} className='default-link'>
           {product.slug}
         </Link>
@@ -54,7 +54,7 @@ const EditProduct = props => {
               error={formErrors['name']}
               label={'Name'}
               name={'name'}
-              placeholder={'Product Name'}
+              placeholder={'Nombre de Producto'}
               value={product.name}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -80,7 +80,7 @@ const EditProduct = props => {
               error={formErrors['slug']}
               label={'Slug'}
               name={'slug'}
-              placeholder={'Product Slug'}
+              placeholder={'Producto Titulo'}
               value={product.slug}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -93,7 +93,7 @@ const EditProduct = props => {
               error={formErrors['description']}
               label={'Description'}
               name={'description'}
-              placeholder={'Product Description'}
+              placeholder={'Descripcion de producto'}
               value={product.description}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -107,7 +107,7 @@ const EditProduct = props => {
               label={'Quantity'}
               name={'quantity'}
               decimals={false}
-              placeholder={'Product Quantity'}
+              placeholder={'Cantidad de producto'}
               value={product.quantity}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -121,7 +121,7 @@ const EditProduct = props => {
               label={'Price'}
               name={'price'}
               min={1}
-              placeholder={'Product Price'}
+              placeholder={'Precio'}
               value={product.price}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -131,7 +131,7 @@ const EditProduct = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={formErrors['taxable']}
-              label={'Taxable'}
+              label={'IVA'}
               multi={false}
               name={'taxable'}
               value={[product.taxable ? taxableSelect[0] : taxableSelect[1]]}
@@ -145,7 +145,7 @@ const EditProduct = props => {
             <Col xs='12' md='12'>
               <SelectOption
                 error={formErrors['brand']}
-                label={'Select Brand'}
+                label={'Selecciona marca'}
                 multi={false}
                 value={product.brand}
                 options={brands}
@@ -159,7 +159,7 @@ const EditProduct = props => {
             <Switch
               id={`enable-product-${product._id}`}
               name={'isActive'}
-              label={'Active?'}
+              label={'Activar?'}
               checked={product?.isActive}
               toggleCheckboxChange={value => {
                 productChange('isActive', value);
@@ -172,12 +172,12 @@ const EditProduct = props => {
         <div className='d-flex flex-column flex-md-row'>
           <Button
             type='submit'
-            text='Save'
+            text='Guardar'
             className='mb-3 mb-md-0 mr-0 mr-md-3'
           />
           <Button
             variant='danger'
-            text='Delete'
+            text='Borrar'
             onClick={() => deleteProduct(product._id)}
           />
         </div>

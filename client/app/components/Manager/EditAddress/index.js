@@ -31,7 +31,7 @@ const EditAddress = props => {
               error={formErrors['address']}
               label={'Address'}
               name={'address'}
-              placeholder={'Address: Street, House No / Apartment No'}
+              placeholder={'Dirección: Calle, Casa No / Apartamento No'}
               value={address.address}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -44,7 +44,7 @@ const EditAddress = props => {
               error={formErrors['city']}
               label={'City'}
               name={'city'}
-              placeholder={'City'}
+              placeholder={'Ciudad'}
               value={address.city}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -57,7 +57,7 @@ const EditAddress = props => {
               error={formErrors['state']}
               label={'State'}
               name={'state'}
-              placeholder={'State'}
+              placeholder={'Estado'}
               value={address.state}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -70,7 +70,7 @@ const EditAddress = props => {
               error={formErrors['country']}
               label={'Country'}
               name={'country'}
-              placeholder={'Please Enter Your Country'}
+              placeholder={'Por favor ingresa tu Pais'}
               value={address.country}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -83,7 +83,7 @@ const EditAddress = props => {
               error={formErrors['zipCode']}
               label={'Zipcode'}
               name={'zipCode'}
-              placeholder={'Please Enter Your Zipcode'}
+              placeholder={'Por favor ingresa tu cedula'}
               value={address.zipCode}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -93,7 +93,7 @@ const EditAddress = props => {
           <Col xs='12' md='12'>
             <Checkbox
               id={'default'}
-              label={'As the Default'}
+              label={'Por Defecto'}
               name={'isDefault'}
               checked={address.isDefault}
               onChange={(name, value) => {
@@ -106,12 +106,12 @@ const EditAddress = props => {
         <div className='d-flex flex-column flex-md-row'>
           <Button
             type='submit'
-            text='Save'
+            text='Guardar'
             className='mb-3 mb-md-0 mr-0 mr-md-3'
           />
           <Button
             variant='danger'
-            text='Delete'
+            text='Borrar'
             onClick={() => deleteAddress(address._id)}
           />
         </div>

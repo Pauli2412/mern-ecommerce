@@ -250,18 +250,19 @@ export const addProduct = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newProduct, rules, {
-        'required.sku': 'Sku is required.',
+        'required.sku': 'El SKU es requerido.',
         'alpha_dash.sku':
-          'Sku may have alpha-numeric characters, as well as dashes and underscores only.',
-        'required.name': 'Name is required.',
-        'required.description': 'Description is required.',
+          'El SKU puede contener caracteres alfanuméricos, guiones y guiones bajos solamente.',
+        'required.name': 'El nombre es requerido.',
+        'required.description': 'La descripción es requerida.',
         'max.description':
-          'Description may not be greater than 200 characters.',
-        'required.quantity': 'Quantity is required.',
-        'required.price': 'Price is required.',
-        'required.taxable': 'Taxable is required.',
-        'required.image': 'Please upload files with jpg, jpeg, png format.',
-        'required.brand': 'Brand is required.'
+          'La descripción no puede tener más de 200 caracteres.',
+        'required.quantity': 'La cantidad es requerida.',
+        'required.price': 'El precio es requerido.',
+        'required.taxable': 'El campo de impuestos es requerido.',
+        'required.image': 'Por favor sube archivos en formato jpg, jpeg o png.',
+        'required.brand': 'La marca es requerida.'
+
       });
 
       if (!isValid) {
@@ -336,20 +337,18 @@ export const updateProduct = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newProduct, rules, {
-        'required.name': 'Name is required.',
-        'required.sku': 'Sku is required.',
-        'alpha_dash.sku':
-          'Sku may have alpha-numeric characters, as well as dashes and underscores only.',
-        'required.slug': 'Slug is required.',
-        'alpha_dash.slug':
-          'Slug may have alpha-numeric characters, as well as dashes and underscores only.',
-        'required.description': 'Description is required.',
-        'max.description':
-          'Description may not be greater than 200 characters.',
-        'required.quantity': 'Quantity is required.',
-        'required.price': 'Price is required.',
-        'required.taxable': 'Taxable is required.',
-        'required.brand': 'Brand is required.'
+        'required.name': 'El nombre es requerido.',
+        'required.sku': 'El SKU es requerido.',
+        'alpha_dash.sku': 'El SKU puede contener caracteres alfanuméricos, guiones y guiones bajos solamente.',
+        'required.slug': 'El Titulo es requerido.',
+        'alpha_dash.slug': 'El Titulo puede contener caracteres alfanuméricos, guiones y guiones bajos solamente.',
+        'required.description': 'La descripción es requerida.',
+        'max.description': 'La descripción no puede tener más de 200 caracteres.',
+        'required.quantity': 'La cantidad es requerida.',
+        'required.price': 'El precio es requerido.',
+        'required.taxable': 'El campo de impuestos es requerido.',
+        'required.brand': 'La marca es requerida.'
+
       });
 
       if (!isValid) {

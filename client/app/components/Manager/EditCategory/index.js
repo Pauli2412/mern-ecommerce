@@ -33,7 +33,7 @@ const EditCategory = props => {
   return (
     <div className='edit-category'>
       <div className='d-flex flex-row mx-0 mb-3'>
-        <label className='mr-1'>Category link </label>
+        <label className='mr-1'>Categoria </label>
         <Link to={`/shop/category/${category.slug}`} className='default-link'>
           {category.slug}
         </Link>
@@ -46,7 +46,7 @@ const EditCategory = props => {
               error={formErrors['name']}
               label={'Name'}
               name={'name'}
-              placeholder={'Category Name'}
+              placeholder={'Nombre de categoria'}
               value={category.name}
               onInputChange={(name, value) => {
                 categoryChange(name, value);
@@ -59,7 +59,7 @@ const EditCategory = props => {
               error={formErrors['slug']}
               label={'Slug'}
               name={'slug'}
-              placeholder={'Category Slug'}
+              placeholder={'Category Titulo'}
               value={category.slug}
               onInputChange={(name, value) => {
                 categoryChange(name, value);
@@ -72,7 +72,7 @@ const EditCategory = props => {
               error={formErrors['description']}
               label={'Description'}
               name={'description'}
-              placeholder={'Category Description'}
+              placeholder={'Descripcion de Categoria'}
               value={category.description}
               onInputChange={(name, value) => {
                 categoryChange(name, value);
@@ -82,7 +82,7 @@ const EditCategory = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={formErrors['products']}
-              label={'Select Products'}
+              label={'Selecciona Producto'}
               multi={true}
               defaultValue={category.products}
               options={products}
@@ -95,10 +95,10 @@ const EditCategory = props => {
             <Switch
               style={{ width: 100 }}
               tooltip={category.isActive}
-              tooltipContent={`Disabling ${category.name} will also disable all ${category.name} products.`}
+              tooltipContent={`Al deshabilitar ${category.name} también se deshabilitarán todos los productos ${category.name}.`}
               id={`enable-category-${category._id}`}
               name={'isActive'}
-              label={'Active?'}
+              label={'Activar?'}
               checked={category.isActive}
               toggleCheckboxChange={value =>
                 activateCategory(category._id, value)
@@ -110,12 +110,12 @@ const EditCategory = props => {
         <div className='d-flex flex-column flex-md-row'>
           <Button
             type='submit'
-            text='Save'
+            text='Guardar'
             className='mb-3 mb-md-0 mr-0 mr-md-3'
           />
           <Button
             variant='danger'
-            text='Delete'
+            text='Borrar'
             onClick={() => deleteCategory(category._id)}
           />
         </div>

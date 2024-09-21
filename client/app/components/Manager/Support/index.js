@@ -138,17 +138,17 @@ const Support = props => {
                   </div>
                 ) : (
                   <div className='d-flex flex-column justify-content-center h-100 p-4 p-md-0'>
-                    <NotFound message='Select chat to start messaging' />
+                    <NotFound message='Seleccione el chat para comenzar a enviar mensajes.' />
                   </div>
                 )}
               </Col>
             </Row>
           ) : (
-            <NotFound message='No users connected.' />
+            <NotFound message='No hay usuarios conectadas.' />
           )}
         </>
       ) : (
-        <NotFound message='Not connected.' />
+        <NotFound message='No estas conectada' />
       )}
     </>
   );

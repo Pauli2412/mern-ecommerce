@@ -43,10 +43,11 @@ export const login = () => {
     const user = getState().login.loginFormData;
 
     const { isValid, errors } = allFieldsValidation(user, rules, {
-      'required.email': 'Email is required.',
-      'email.email': 'Email format is invalid.',
-      'required.password': 'Password is required.',
-      'min.password': 'Password must be at least 6 characters.'
+      'required.email': 'El correo electrónico es obligatorio.',
+      'email.email': 'El formato del correo electrónico es inválido.',
+      'required.password': 'La contraseña es obligatoria.',
+      'min.password': 'La contraseña debe tener al menos 6 caracteres.'
+
     });
 
     if (!isValid) {
@@ -62,7 +63,7 @@ export const login = () => {
       const firstName = response.data.user.firstName;
 
       const successfulOptions = {
-        title: `Hey${firstName ? ` ${firstName}` : ''}, Welcome Back!`,
+        title: `Hey${firstName ? ` ${firstName}` : ''}, ¡Bienvenid@ de nuevo!`,
         position: 'tr',
         autoDismiss: 1
       };
@@ -76,7 +77,7 @@ export const login = () => {
 
       dispatch({ type: LOGIN_RESET });
     } catch (error) {
-      const title = `Please try to login again!`;
+      const title = `Por favor, intente acceder de nuevo.`;
       handleError(error, dispatch, title);
     } finally {
       dispatch({ type: SET_LOGIN_SUBMITTING, payload: false });
@@ -88,7 +89,7 @@ export const login = () => {
 export const signOut = () => {
   return (dispatch, getState) => {
     const successfulOptions = {
-      title: `You have signed out!`,
+      title: `Te has dado de baja!`,
       position: 'tr',
       autoDismiss: 1
     };

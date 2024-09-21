@@ -13,7 +13,7 @@ import actions from '../../actions';
 import Input from '../../components/Common/Input';
 import Button from '../../components/Common/Button';
 
-class MerchantSignup extends React.PureComponent {
+class RegistroComerciante extends React.PureComponent {
   componentDidMount() {
     const email = this.props.location.search.split('=')[1];
     this.props.merchantSignupChange('email', email);
@@ -40,7 +40,7 @@ class MerchantSignup extends React.PureComponent {
           <Row>
             <Col xs={{ size: 12 }} md={{ size: 6, offset: 3 }} className='p-0'>
               <Col xs='12' md='12'>
-                <h2 className='text-center'>Complete Sign Up</h2>
+                <h2 className='text-center'>Completa el Registro</h2>
                 <hr />
               </Col>
 
@@ -48,9 +48,9 @@ class MerchantSignup extends React.PureComponent {
                 <Input
                   type={'text'}
                   error={formErrors['email']}
-                  label={'Email Address'}
+                  label={'Dirección de correo electrónico'}
                   name={'email'}
-                  placeholder={'Please Enter Your Email'}
+                  placeholder={'Por favor ingresa tu correo electrónico'}
                   value={signupFormData.email}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);
@@ -61,9 +61,9 @@ class MerchantSignup extends React.PureComponent {
                 <Input
                   type={'text'}
                   error={formErrors['firstName']}
-                  label={'First Name'}
+                  label={'Nombre'}
                   name={'firstName'}
-                  placeholder={'Please Enter Your First Name'}
+                  placeholder={'Por favor ingresa tu nombre'}
                   value={signupFormData.firstName}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);
@@ -74,9 +74,9 @@ class MerchantSignup extends React.PureComponent {
                 <Input
                   type={'text'}
                   error={formErrors['lastName']}
-                  label={'Last Name'}
+                  label={'Apellido'}
                   name={'lastName'}
-                  placeholder={'Please Enter Your Last Name'}
+                  placeholder={'Por favor ingresa tu apellido'}
                   value={signupFormData.lastName}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);
@@ -86,10 +86,10 @@ class MerchantSignup extends React.PureComponent {
               <Col xs='12' md='12'>
                 <Input
                   type={'password'}
-                  label={'Password'}
+                  label={'Contraseña'}
                   error={formErrors['password']}
                   name={'password'}
-                  placeholder={'Please Enter Your Password'}
+                  placeholder={'Por favor ingresa tu contraseña'}
                   value={signupFormData.password}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);
@@ -101,7 +101,7 @@ class MerchantSignup extends React.PureComponent {
                   className='mt-3'
                   type='submit'
                   variant='primary'
-                  text='Get Started'
+                  text='Comenzar'
                 />
               </Col>
             </Col>
@@ -119,4 +119,5 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, actions)(MerchantSignup);
+export default connect(mapStateToProps, actions)(RegistroComerciante);
+

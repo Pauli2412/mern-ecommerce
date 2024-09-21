@@ -32,7 +32,7 @@ export const updateWishlist = (isLiked, productId) => {
         }
       } else {
         const retryOptions = {
-          title: `Please login to wishlist a product`,
+          title: `Inicie sesión para añadir un producto a la lista de deseos`,
           position: 'tr',
           autoDismiss: 1
         };

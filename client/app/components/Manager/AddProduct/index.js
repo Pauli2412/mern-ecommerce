@@ -45,7 +45,7 @@ const AddProduct = props => {
               error={formErrors['sku']}
               label={'Sku'}
               name={'sku'}
-              placeholder={'Product Sku'}
+              placeholder={'Producto Sku'}
               value={productFormData.sku}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -58,7 +58,7 @@ const AddProduct = props => {
               error={formErrors['name']}
               label={'Name'}
               name={'name'}
-              placeholder={'Product Name'}
+              placeholder={'Nombre de Producto'}
               value={productFormData.name}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -71,7 +71,7 @@ const AddProduct = props => {
               error={formErrors['description']}
               label={'Description'}
               name={'description'}
-              placeholder={'Product Description'}
+              placeholder={'Descripcion'}
               value={productFormData.description}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -85,7 +85,7 @@ const AddProduct = props => {
               label={'Quantity'}
               name={'quantity'}
               decimals={false}
-              placeholder={'Product Quantity'}
+              placeholder={'Cantidad'}
               value={productFormData.quantity}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -99,7 +99,7 @@ const AddProduct = props => {
               label={'Price'}
               name={'price'}
               min={1}
-              placeholder={'Product Price'}
+              placeholder={'Precio'}
               value={productFormData.price}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -123,7 +123,7 @@ const AddProduct = props => {
               disabled={user.role === ROLES.Merchant}
               error={formErrors['brand']}
               name={'brand'}
-              label={'Select Brand'}
+              label={'Marca'}
               value={
                 user.role === ROLES.Merchant ? brands[1] : productFormData.brand
               }
@@ -139,7 +139,7 @@ const AddProduct = props => {
               error={formErrors['file']}
               name={'image'}
               label={'file'}
-              placeholder={'Please Upload Image'}
+              placeholder={'Porfavor sube una imagen'}
               value={image}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -158,7 +158,7 @@ const AddProduct = props => {
         </Row>
         <hr />
         <div className='add-product-actions'>
-          <Button type='submit' text='Add Product' />
+          <Button type='submit' text='Añadir Producto' />
         </div>
       </form>
     </div>

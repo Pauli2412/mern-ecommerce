@@ -9,7 +9,7 @@ const routes = require('./routes');
 const socket = require('./socket');
 const setupDB = require('./utils/db');
 
-const { port } = keys;
+const { port } = keys; // Asegúrate de que `port` esté configurado correctamente en tu archivo de claves.
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(
   helmet({
     contentSecurityPolicy: false,
-    frameguard: true
+    frameguard: true,
   })
 );
 app.use(cors());
@@ -26,6 +26,12 @@ setupDB();
 require('./config/passport')(app);
 app.use(routes);
 
+// Maneja la ruta raíz
+app.get('/', (req, res) => {
+  res.send('Bienvenido a la aplicación');
+});
+
+// Inicia el servidor en el puerto definido
 const server = app.listen(port, () => {
   console.log(
     `${chalk.green('✓')} ${chalk.blue(
@@ -35,3 +41,4 @@ const server = app.listen(port, () => {
 });
 
 socket(server);
+

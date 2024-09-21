@@ -36,7 +36,7 @@ class List extends React.PureComponent {
           ) : brands.length > 0 ? (
             <BrandList brands={brands} user={user} />
           ) : (
-            <NotFound message='No brands found.' />
+            <NotFound message='No se ha encontrado ninguna marca.' />
           )}
         </SubPage>
       </>

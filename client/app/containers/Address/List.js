@@ -32,7 +32,7 @@ class List extends React.PureComponent {
           {addresses.length > 0 ? (
             <AddressList addresses={addresses} />
           ) : (
-            <NotFound message='No addresses found.' />
+            <NotFound message='No se ha encontrado ninguna dirección.' />
           )}
         </SubPage>
       </>

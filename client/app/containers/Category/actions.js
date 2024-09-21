@@ -134,11 +134,11 @@ export const addCategory = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newCategory, rules, {
-        'required.name': 'Name is required.',
-        'required.description': 'Description is required.',
+        'required.name': 'El nombre es obligatorio',
+        'required.description': 'La descripcion es Obligatoria.',
         'max.description':
-          'Description may not be greater than 200 characters.',
-        'required.products': 'Products are required.'
+          'La descripción no puede tener más de 200 caracteres.',
+        'required.products': 'Se necesitan productos'
       });
 
       if (!isValid) {
@@ -189,14 +189,14 @@ export const updateCategory = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newCategory, rules, {
-        'required.name': 'Name is required.',
-        'required.slug': 'Slug is required.',
+        'required.name': 'El nombre es Obligatorio.',
+        'required.slug': 'El titulo es requerido',
         'alpha_dash.slug':
-          'Slug may have alpha-numeric characters, as well as dashes and underscores only.',
-        'required.description': 'Description is required.',
+          'Titulo puede tener caracteres alfanuméricos, así como guiones y guiones bajos solamente.',
+        'required.description': 'La descripción es obligatoria.',
         'max.description':
-          'Description may not be greater than 200 characters.',
-        'required.products': 'Products are required.'
+          'La descripción no puede tener más de 200 caracteres.',
+        'required.products': 'Se necesitan productos.'
       });
 
       if (!isValid) {

@@ -26,7 +26,7 @@ class Contact extends React.PureComponent {
 
     return (
       <div className='contact'>
-        <h3 className='text-uppercase'>Contact Information</h3>
+        <h3 className='text-uppercase'>Información de Contacto</h3>
         <hr />
         <form onSubmit={handleSubmit}>
           <Row>
@@ -36,7 +36,7 @@ class Contact extends React.PureComponent {
                 error={formErrors['name']}
                 label={'Name'}
                 name={'name'}
-                placeholder={'You Full Name'}
+                placeholder={'Lebassi'}
                 value={contactFormData.name}
                 onInputChange={(name, value) => {
                   contactFormChange(name, value);
@@ -49,7 +49,7 @@ class Contact extends React.PureComponent {
                 error={formErrors['email']}
                 label={'Email'}
                 name={'email'}
-                placeholder={'Your Email Address'}
+                placeholder={'isabelchalco60@gmail.com'}
                 value={contactFormData.email}
                 onInputChange={(name, value) => {
                   contactFormChange(name, value);
@@ -62,7 +62,7 @@ class Contact extends React.PureComponent {
                 error={formErrors['message']}
                 label={'Message'}
                 name={'message'}
-                placeholder={'Please Describe Your Message'}
+                placeholder={'Lebasso es una empresa de moda Lojana, buscamos crear los mejores outfits en tendencia y a precios accesibles'}
                 value={contactFormData.message}
                 onInputChange={(name, value) => {
                   contactFormChange(name, value);

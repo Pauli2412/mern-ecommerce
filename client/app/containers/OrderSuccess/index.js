@@ -36,9 +36,9 @@ class OrderSuccess extends React.PureComponent {
           <LoadingIndicator />
         ) : order._id ? (
           <div className='order-message'>
-            <h2>Thank you for your order.</h2>
+            <h2>Gracias por tu pedido.</h2>
             <p>
-              Order{' '}
+              Pedido{' '}
               <Link
                 to={{
                   pathname: `/order/${order._id}?success`,
@@ -49,20 +49,20 @@ class OrderSuccess extends React.PureComponent {
               >
                 #{order._id}
               </Link>{' '}
-              is complete.
+              ha sido completado.
             </p>
-            <p>A confirmation email will be sent to you shortly.</p>
+            <p>Te enviaremos un correo de confirmación en breve.</p>
             <div className='order-success-actions'>
               <Link to='/dashboard/orders' className='btn-link'>
-                Manage Orders
+                Administrar Pedidos
               </Link>
               <Link to='/shop' className='btn-link shopping-btn'>
-                Continue Shopping
+                Continuar Comprando
               </Link>
             </div>
           </div>
         ) : (
-          <NotFound message='No order found.' />
+          <NotFound message='No se encontró el pedido.' />
         )}
       </div>
     );

@@ -158,11 +158,12 @@ export const addProductReview = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newReview, rules, {
-        'required.title': 'Title is required.',
-        'required.review': 'Review is required.',
-        'required.rating': 'Rating is required.',
-        'min.rating': 'Rating is required.',
-        'required.isRecommended': 'Recommendable is required.'
+        'required.title': 'El título es requerido.',
+        'required.review': 'La reseña es requerida.',
+        'required.rating': 'La calificación es requerida.',
+        'min.rating': 'La calificación es requerida.',
+        'required.isRecommended': 'Se requiere indicar si es recomendable.'
+
       });
 
       if (!isValid) {

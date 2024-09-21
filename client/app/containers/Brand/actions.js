@@ -130,9 +130,9 @@ export const addBrand = () => {
       const brand = getState().brand.brandFormData;
 
       const { isValid, errors } = allFieldsValidation(brand, rules, {
-        'required.name': 'Name is required.',
-        'required.description': 'Description is required.',
-        'max.description': 'Description may not be greater than 200 characters.'
+        'required.name': 'El nombre es obligatorio.',
+        'required.description': 'La descripcion es obligatoria',
+        'max.description': 'La descripción no puede tener más de 200 caracteres.'
       });
 
       if (!isValid) {
@@ -182,12 +182,12 @@ export const updateBrand = () => {
       };
 
       const { isValid, errors } = allFieldsValidation(newBrand, rules, {
-        'required.name': 'Name is required.',
-        'required.slug': 'Slug is required.',
+        'required.name': 'EL nombre es Obligatorio',
+        'required.slug': 'TItulo del producto Obligatorio',
         'alpha_dash.slug':
-          'Slug may have alpha-numeric characters, as well as dashes and underscores only.',
-        'required.description': 'Description is required.',
-        'max.description': 'Description may not be greater than 200 characters.'
+          'EL titulo puede tener caracteres alfanuméricos, así como guiones y guiones bajos solamente.',
+        'required.description': 'Descripcion obligatoria',
+        'max.description': 'La descripción no puede tener más de 200 caracteres.'
       });
 
       if (!isValid) {

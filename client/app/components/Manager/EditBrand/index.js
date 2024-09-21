@@ -33,7 +33,7 @@ const EditBrand = props => {
   return (
     <div className='edit-brand'>
       <div className='d-flex flex-row mx-0 mb-3'>
-        <label className='mr-1'>Brand link </label>
+        <label className='mr-1'>Marca </label>
         <Link to={`/shop/brand/${brand.slug}`} className='default-link'>
           {brand.slug}
         </Link>
@@ -46,7 +46,7 @@ const EditBrand = props => {
               error={formErrors['name']}
               label={'Name'}
               name={'name'}
-              placeholder={'Brand Name'}
+              placeholder={'Nombre de Marca'}
               value={brand.name}
               onInputChange={(name, value) => {
                 brandChange(name, value);
@@ -59,7 +59,7 @@ const EditBrand = props => {
               error={formErrors['slug']}
               label={'Slug'}
               name={'slug'}
-              placeholder={'Brand Slug'}
+              placeholder={'TItulo de Marca'}
               value={brand.slug}
               onInputChange={(name, value) => {
                 brandChange(name, value);
@@ -72,7 +72,7 @@ const EditBrand = props => {
               error={formErrors['description']}
               label={'Description'}
               name={'description'}
-              placeholder={'Brand Description'}
+              placeholder={'Descripcion de Marca'}
               value={brand.description}
               onInputChange={(name, value) => {
                 brandChange(name, value);
@@ -83,10 +83,10 @@ const EditBrand = props => {
             <Switch
               style={{ width: 100 }}
               tooltip={brand.isActive}
-              tooltipContent={`Disabling ${brand.name} will also disable all ${brand.name} products.`}
+              tooltipContent={`Al deshabilitar ${brand.name} también se deshabilitarán todos los productos ${brand.name}.`}
               id={`enable-brand-${brand._id}`}
               name={'isActive'}
-              label={'Active?'}
+              label={'Activar?'}
               checked={brand.isActive}
               toggleCheckboxChange={value => activateBrand(brand._id, value)}
             />
@@ -96,12 +96,12 @@ const EditBrand = props => {
         <div className='d-flex flex-column flex-md-row'>
           <Button
             type='submit'
-            text='Save'
+            text='Guardar'
             className='mb-3 mb-md-0 mr-0 mr-md-3'
           />
           <Button
             variant='danger'
-            text='Delete'
+            text='Borrar'
             disabled={user.role === ROLES.Merchant}
             onClick={() => deleteBrand(brand._id)}
           />

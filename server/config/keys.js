@@ -1,6 +1,6 @@
 module.exports = {
   app: {
-    name: 'Mern Ecommerce',
+    name: 'LEBASSI',
     apiURL: `${process.env.BASE_API_URL}`,
     clientURL: process.env.CLIENT_URL
   },

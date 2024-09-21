@@ -27,7 +27,7 @@ class List extends React.PureComponent {
       <>
         <SubPage
           title='Categories'
-          actionTitle='Add'
+          actionTitle='Agregar'
           handleAction={() => history.push('/dashboard/category/add')}
         >
           {isLoading ? (
@@ -35,7 +35,7 @@ class List extends React.PureComponent {
           ) : categories.length > 0 ? (
             <CategoryList categories={categories} />
           ) : (
-            <NotFound message='No categories found.' />
+            <NotFound message='No se ha encontrado ninguna categoría' />
           )}
         </SubPage>
       </>

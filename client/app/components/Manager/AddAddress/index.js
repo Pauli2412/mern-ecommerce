@@ -30,7 +30,7 @@ const AddAddress = props => {
               error={formErrors['address']}
               label={'Address'}
               name={'address'}
-              placeholder={'Address: Street, House No / Apartment No'}
+              placeholder={'Dirección: Calle, Casa No / Apartamento No'}
               value={addressFormData.address}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -43,7 +43,7 @@ const AddAddress = props => {
               error={formErrors['city']}
               label={'City'}
               name={'city'}
-              placeholder={'City'}
+              placeholder={'Ciudad'}
               value={addressFormData.city}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -56,7 +56,7 @@ const AddAddress = props => {
               error={formErrors['state']}
               label={'State'}
               name={'state'}
-              placeholder={'State'}
+              placeholder={'Estado'}
               value={addressFormData.state}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -69,7 +69,7 @@ const AddAddress = props => {
               error={formErrors['country']}
               label={'Country'}
               name={'country'}
-              placeholder={'Please Enter Your country'}
+              placeholder={'Por favor ingrese su país'}
               value={addressFormData.country}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -82,7 +82,7 @@ const AddAddress = props => {
               error={formErrors['zipCode']}
               label={'Zipcode'}
               name={'zipCode'}
-              placeholder={'Please Enter Your Zipcode'}
+              placeholder={'Por favor ingrese su código postal'}
               value={addressFormData.zipCode}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -103,7 +103,7 @@ const AddAddress = props => {
         </Row>
         <hr />
         <div className='add-address-actions'>
-          <Button type='submit' text='Add Address' />
+          <Button type='submit' text='Añadir Direccion' />
         </div>
       </form>
     </div>

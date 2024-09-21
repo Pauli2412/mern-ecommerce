@@ -13,7 +13,7 @@ import SubPage from '../../components/Manager/SubPage';
 import ResetPasswordForm from '../../components/Common/ResetPasswordForm';
 
 class AccountSecurity extends React.PureComponent {
-  componentDidMount() {}
+  componentDidMount() { }
 
   render() {
     const {
@@ -27,7 +27,7 @@ class AccountSecurity extends React.PureComponent {
       <div className='account-security'>
         <SubPage title={'Account Security'} isMenuOpen={null}>
           <div className='reset-form'>
-            <h4>Reset Password</h4>
+            <h4>Restablecer contraseña</h4>
             <ResetPasswordForm
               resetFormData={resetFormData}
               formErrors={formErrors}

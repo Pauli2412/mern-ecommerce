@@ -41,7 +41,7 @@ const Summary = props => {
             filledIcon={<i className='fa fa-star' />}
             value={averageRating}
           />
-          {totalReviews > 0 && <span>based on {totalReviews} reviews.</span>}
+          {totalReviews > 0 && <span>Basado en {totalReviews} reseñas.</span>}
         </div>
       )}
 
@@ -74,7 +74,7 @@ const Summary = props => {
       ) : (
         <NotFound>
           <ReviewIcon width='40' height='40' className='my-2' />
-          <p className='mb-2'>Be the first to add a review.</p>
+          <p className='mb-2'>Se el/la primer@ persona en añadir una opinión.</p>
         </NotFound>
       )}
     </div>

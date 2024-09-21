@@ -59,7 +59,7 @@ class Edit extends React.PureComponent {
             activateCategory={activateCategory}
           />
         ) : (
-          <NotFound message='No category found.' />
+          <NotFound message='No se ha encontrado ninguna categoría.' />
         )}
       </SubPage>
     );

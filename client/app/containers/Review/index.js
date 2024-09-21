@@ -59,7 +59,7 @@ class Review extends React.PureComponent {
           )}
 
           {!isLoading && !displayReviews && (
-            <NotFound message='No reviews found.' />
+            <NotFound message='No se han encontrado opiniones.' />
           )}
         </SubPage>
       </div>

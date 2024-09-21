@@ -39,11 +39,10 @@ const ReviewList = props => {
         <div className='d-flex flex-column justify-content-center align-items-center'>
           <img
             className='item-image'
-            src={`${
-              product.imageUrl
-                ? product.imageUrl
-                : '/images/placeholder-image.png'
-            }`}
+            src={`${product.imageUrl
+              ? product.imageUrl
+              : '/images/placeholder-image.png'
+              }`}
           />
         </div>
       );
@@ -79,7 +78,7 @@ const ReviewList = props => {
                     {review?.product.name}
                   </Link>
                 ) : (
-                  <p>Product is not available.</p>
+                  <p>El producto no está disponible.</p>
                 )}
                 <ReactStars
                   classNames='mt-1 mt-lg-2'
@@ -105,7 +104,7 @@ const ReviewList = props => {
               <div className='d-flex flex-column flex-lg-row justify-content-between align-items-lg-center mx-0'>
                 <div className='d-flex flex-row mx-0'>
                   <CheckIcon className='text-green' />
-                  <p className='ml-2 mb-0'>Approved</p>
+                  <p className='ml-2 mb-0'>Aprobado</p>
                 </div>
                 <Button
                   className='mt-3 mt-lg-0'
@@ -118,7 +117,7 @@ const ReviewList = props => {
               <>
                 <div className='d-flex align-items-center mb-3'>
                   <RefreshIcon className='text-primary' />
-                  <p className='fw-medium ml-3 mb-0'>Re Approve Review</p>
+                  <p className='fw-medium ml-3 mb-0'>Reaprobar revisión</p>
                 </div>
                 <div className='d-flex flex-column flex-lg-row justify-content-between align-items-lg-center mx-0'>
                   <Button

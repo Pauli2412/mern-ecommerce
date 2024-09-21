@@ -30,7 +30,7 @@ const AccountDetails = props => {
               user.email
             ) : (
               <span className='provider-email'>
-                Logged in With {user.provider}
+                Inicie sesión con {user.provider}
               </span>
             )}
           </p>
@@ -44,7 +44,7 @@ const AccountDetails = props => {
               type={'text'}
               label={'First Name'}
               name={'firstName'}
-              placeholder={'Please Enter Your First Name'}
+              placeholder={'Por favor ingresa tu nombre'}
               value={user.firstName ? user.firstName : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -56,7 +56,7 @@ const AccountDetails = props => {
               type={'text'}
               label={'Last Name'}
               name={'lastName'}
-              placeholder={'Please Enter Your Last Name'}
+              placeholder={'Por favor ingresa tu apellido'}
               value={user.lastName ? user.lastName : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -81,7 +81,7 @@ const AccountDetails = props => {
               type={'text'}
               label={'Phone Number'}
               name={'phoneNumber'}
-              placeholder={'Please Enter Your Phone Number'}
+              placeholder={'Por favor ingresa tu numero telefonico'}
               value={user.phoneNumber ? user.phoneNumber : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -91,7 +91,7 @@ const AccountDetails = props => {
         </Row>
         <hr />
         <div className='profile-actions'>
-          <Button type='submit' variant='secondary' text='Save changes' />
+          <Button type='submit' variant='secondary' text='Guardar Cambios.' />
         </div>
       </form>
     </div>

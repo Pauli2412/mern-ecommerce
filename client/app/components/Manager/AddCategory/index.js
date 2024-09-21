@@ -37,7 +37,7 @@ const AddCategory = props => {
               error={formErrors['name']}
               label={'Name'}
               name={'name'}
-              placeholder={'Category Name'}
+              placeholder={'Nombre de categoria'}
               value={categoryFormData.name}
               onInputChange={(name, value) => {
                 categoryChange(name, value);
@@ -50,7 +50,7 @@ const AddCategory = props => {
               error={formErrors['description']}
               label={'Description'}
               name={'description'}
-              placeholder={'Category Description'}
+              placeholder={'Descripcion de Categoria'}
               value={categoryFormData.description}
               onInputChange={(name, value) => {
                 categoryChange(name, value);
@@ -60,7 +60,7 @@ const AddCategory = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={formErrors['products']}
-              label={'Select Products'}
+              label={'Seleccionar productos'}
               multi={true}
               value={categoryFormData.products}
               options={products}

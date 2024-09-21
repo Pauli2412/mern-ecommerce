@@ -67,16 +67,15 @@ class ProductPage extends React.PureComponent {
                 <div className='position-relative'>
                   <img
                     className='item-image'
-                    src={`${
-                      product.imageUrl
-                        ? product.imageUrl
-                        : '/images/placeholder-image.png'
-                    }`}
+                    src={`${product.imageUrl
+                      ? product.imageUrl
+                      : '/images/placeholder-image.png'
+                      }`}
                   />
                   {product.inventory <= 0 && !shopFormErrors['quantity'] ? (
-                    <p className='stock out-of-stock'>Out of stock</p>
+                    <p className='stock out-of-stock'>Fuera de stock</p>
                   ) : (
-                    <p className='stock in-stock'>In stock</p>
+                    <p className='stock in-stock'>En stock</p>
                   )}
                 </div>
               </Col>
@@ -91,7 +90,7 @@ class ProductPage extends React.PureComponent {
                       <hr />
                       {product.brand && (
                         <p className='by'>
-                          see more from{' '}
+                          Ver mas de{' '}
                           <Link
                             to={`/shop/brand/${product.brand.slug}`}
                             className='default-link'
@@ -112,7 +111,7 @@ class ProductPage extends React.PureComponent {
                         decimals={false}
                         min={1}
                         max={product.inventory}
-                        placeholder={'Product Quantity'}
+                        placeholder={'Cantidad de productos'}
                         disabled={
                           product.inventory <= 0 && !shopFormErrors['quantity']
                         }
@@ -133,7 +132,7 @@ class ProductPage extends React.PureComponent {
                             product.inventory <= 0 &&
                             !shopFormErrors['quantity']
                           }
-                          text='Remove From Bag'
+                          text='Sacar de Canasta'
                           className='bag-btn'
                           icon={<BagIcon />}
                           onClick={() => handleRemoveFromCart(product)}
@@ -144,7 +143,7 @@ class ProductPage extends React.PureComponent {
                           disabled={
                             product.quantity <= 0 && !shopFormErrors['quantity']
                           }
-                          text='Add To Bag'
+                          text='Agregar a Canasta'
                           className='bag-btn'
                           icon={<BagIcon />}
                           onClick={() => handleAddToCart(product)}
@@ -165,7 +164,7 @@ class ProductPage extends React.PureComponent {
             />
           </>
         ) : (
-          <NotFound message='No product found.' />
+          <NotFound message='Producto no Encontrado' />
         )}
       </div>
     );
